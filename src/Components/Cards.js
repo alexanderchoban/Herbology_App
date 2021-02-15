@@ -1,16 +1,16 @@
 import React from "react";
 
-function Cards(props) {
+function Cards({name, uses, preperation, warning}) {
   return (
     <div className="term">
       <dt>
         <span>
-          {props.name}
+          {name}
         </span>
       </dt>
-      <span>{props.uses}</span>
-      <dd>{props.preperation}</dd>
-      <dd>{props.warning}</dd>
+      <span>{uses}</span>
+      <dd>{preperation}</dd>
+      <dd>{warning}</dd>
     </div>
   );
 }

@@ -8,7 +8,7 @@ body {
   }
   
   h1 {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 500%;
     text-align: center;
     margin-top: 4rem;
@@ -47,6 +47,15 @@ body {
   .dictionary > .term > dt {
     margin-bottom: 1rem;
     border: blueviolet 1px;
+  }
+
+  .visually-hidden {
+    clip: react(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
   
   dt {

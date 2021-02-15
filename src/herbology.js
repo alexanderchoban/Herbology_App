@@ -1,4 +1,4 @@
-const herbology = [
+ const herbology = [
     {
       id: 1,
       name: "NAME: Ashwagandha",
