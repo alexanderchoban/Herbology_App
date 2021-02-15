@@ -4,7 +4,6 @@ body {
     line-height: 1.666;
     background: #c0d2d4;
     color: #555;
-    border: lawngreen 1px;
   }
   
   h1 {
@@ -14,22 +13,19 @@ body {
     margin-top: 4rem;
     color: #fff;
     line-height: 1.2;
-    border: red 1px;
   }
   
   h1 span {
     padding: 5px 15px;
     background: rgb(126, 124, 124);
-    border:royalblue 1px;
   }
   
   .dictionary {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 4rem auto;
     max-width: 90%;
-    border: brown 1px;
   }
   
   .dictionary > .term {
@@ -38,15 +34,13 @@ body {
     margin-bottom: 3rem;
     padding: 2rem;
     border-radius: 3px;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: all 100ms ease-in-out;
-    border: black 1px;
   }
   
   .dictionary > .term > dt {
     margin-bottom: 1rem;
-    border: blueviolet 1px;
   }
 
   .visually-hidden {
@@ -71,7 +65,7 @@ body {
   
   
   dd {
-    font-size: 92.5%;
+    font-size: 90%;
     margin-left: 0;
   }
   

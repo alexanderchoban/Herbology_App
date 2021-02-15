@@ -3,7 +3,7 @@ import herbology from '../herbology';
 import Search from './Search';
 
 
-function createCard({id, name, uses, preparation, warning}) {
+const createCard = ({id, name, uses, preparation, warning}) => {
   return (
     <Cards
       key={id}
@@ -11,19 +11,15 @@ function createCard({id, name, uses, preparation, warning}) {
       uses={uses}
       preparation={preparation}
       warning={warning}
+      />
   );
-}
-  
+  }
+    
 
-function App() {
+const App = () => {
   return (
     <div>
     <Search/>
-    <ul>
-      {herbology.map((herbology) => (
-        <li key={herbology.id}>{herbology.name}</li>
-      ))}
-    </ul>
       <h1>
         <span>Herbology</span>
       </h1>

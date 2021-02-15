@@ -1,15 +1,15 @@
 import React from "react";
 
-function Cards({name, uses, preperation, warning}) {
+function Cards({name, uses, preparation, warning}) {
   return (
     <div className="term">
       <dt>
         <span>
           {name}
         </span>
-      </dt>
-      <span>{uses}</span>
-      <dd>{preperation}</dd>
+        </dt>
+      <dd>{uses}</dd>
+      <dd>{preparation}</dd>
       <dd>{warning}</dd>
     </div>
   );
