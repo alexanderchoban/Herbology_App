@@ -1,12 +1,12 @@
 import React from "react";
+import {useState} from 'react';
+import herbology from '../herbology';
 
-const Search = () => {
-    return <div>Hello World</div>
-}
 
+const [search, setSearch] = useState('')
 
 const SearchBar = () => (
-      <form action="/" method="get">
+      <div>
         <label htmlFor="header-search">
             <span className="visually-hidden">Search</span>
         </label>
@@ -15,10 +15,16 @@ const SearchBar = () => (
             id="header-search"
             placeholder="Enter search here"
             name="s"
+            value={search}
+            onChange={event => {
+                setSearch(event.target.value)}}
         />
         <button type="submit">Search</button>
-    </form>
-    
+      </div>
+
+const filteredNames = search.length === 0 ? herbology
+: herbology.filter(herbology =>                         
+ herbology.name.toLowerCase().includes(search.toLowerCase()))
 )
 
 
