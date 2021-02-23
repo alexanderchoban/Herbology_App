@@ -1,10 +1,31 @@
 import Cards from './Cards';
 import herbology from '../herbology';
 import Search from './Search';
+import React, {useState} from 'react';
 
 
-const createCard = ({id, name, uses, preparation, warning}) => {
+  
+
+const App = () => {
+
+  const [search, setSearch] = useState('')
+
+
+  const filteredNames = search.length === 0 ? herbology
+  : herbology.filter(herbology =>                         
+   herbology.name.toLowerCase().includes(search.toLowerCase()))
+  
+
+
+
   return (
+    <div>
+    <Search value={search} onChange={ (e) => setSearch(e.target.value)} />
+      <h1>
+        <span>Herbology</span>
+      </h1>
+      <dl className="dictionary">{filteredNames.map( ({id, name, uses, preparation, warning}) => {
+        return (
     <Cards
       key={id}
       name={name}
@@ -12,20 +33,10 @@ const createCard = ({id, name, uses, preparation, warning}) => {
       preparation={preparation}
       warning={warning}
       />
-  );
-  }
-    
-
-const App = () => {
-  return (
-    <div>
-    <Search/>
-      <h1>
-        <span>Herbology</span>
-      </h1>
-      <dl className="dictionary">{herbology.map(createCard)}</dl>
+  ) } )
+  }</dl>
     </div>
-  );
+  )
 }
 
 export default App;
