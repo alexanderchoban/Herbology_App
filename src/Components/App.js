@@ -10,7 +10,7 @@ const App = () => {
 
   const [search, setSearch] = useState('')
 
-  const filteredNames = search.length === 0 ? herbology
+  const filteredHerbs = search.length === 0 ? herbology
   : herbology.filter(item =>                         
    item.name.toLowerCase().includes(search.toLowerCase()))
   
@@ -20,7 +20,7 @@ const App = () => {
       <h1>
         <span>Herbology</span>
       </h1>
-      <dl className="dictionary">{filteredNames.map( ({id, name, uses, preparation, warning}) => {
+      <dl className="dictionary">{filteredHerbs.map( ({id, name, uses, preparation, warning}) => {
         return (
     <Cards
       key={id}
