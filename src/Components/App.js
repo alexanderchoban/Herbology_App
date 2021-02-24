@@ -11,8 +11,8 @@ const App = () => {
   const [search, setSearch] = useState('')
 
   const filteredNames = search.length === 0 ? herbology
-  : herbology.filter(herbology =>                         
-   herbology.name.toLowerCase().includes(search.toLowerCase()))
+  : herbology.filter(item =>                         
+   item.name.toLowerCase().includes(search.toLowerCase()))
   
   return (
     <div>
