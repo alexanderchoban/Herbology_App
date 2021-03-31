@@ -37,7 +37,7 @@ const App = () => {
         )
       })
       }</dl>
-      <Plants />
+   <Plants />
       </QueryClientProvider>
     </div>
   )

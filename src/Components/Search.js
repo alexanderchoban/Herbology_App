@@ -4,7 +4,6 @@ import React from "react";
 const SearchBar = ({value, onChange}) => {
 
   return (
-
       <div>
         <label htmlFor="header-search">
             <span className="visually-hidden">Search</span>

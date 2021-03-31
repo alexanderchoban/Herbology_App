@@ -6,7 +6,7 @@ const fetchPlants = async () => {
     return res.json();
 }
 
-const Plants = async() => {
+const Plants = () => {
     const { data, status } = useQuery('Plants', fetchPlants);
     console.log(data);
 
