@@ -1,7 +1,9 @@
 import React from "react";
 
 function Cards({name, uses, preparation, warning}) {
+
   return (
+    
     <div className="term">
       <dt>
         <span>
