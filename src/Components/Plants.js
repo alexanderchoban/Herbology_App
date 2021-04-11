@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 
 const fetchPlants = async () => {
-    const res= await fetch('http://trefle.io/api/v1/plants?token=qrbYXSsfNwVJLOQI24d-itX0n3dPO3GJ5veUkHz1J7o');
+    const res= await fetch('https://trefle.io/api/v1/plants?token=qrbYXSsfNwVJLOQI24d-itX0n3dPO3GJ5veUkHz1J7o');
     return res.json();
 }
 
