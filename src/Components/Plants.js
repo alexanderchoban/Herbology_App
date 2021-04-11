@@ -1,20 +1,40 @@
-import React from 'react';
-import { useQuery } from 'react-query';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+//import { useQuery } from 'react-query';
 
-const fetchPlants = async () => {
-    const res= await fetch('https://trefle.io/api/v1/plants?token=qrbYXSsfNwVJLOQI24d-itX0n3dPO3GJ5veUkHz1J7o');
-    return res.json();
-}
 
 const Plants = () => {
-    const { data, status } = useQuery('Plants', fetchPlants);
-    console.log(data);
+    const [plants, setPlants] = useState([])
 
-    return (
-        <div>
-            <h2>Plants</h2>
+const API_URL = 'https://trefle.io/api/v1/plants?token=qrbYXSsfNwVJLOQI24d-itX0n3dPO3GJ5veUkHz1J7o';
+
+const fetchPlants = async () => {
+    const { data } = await axios.get(API_URL);
+    console.log(data)
+    setPlants(data)
+}
+
+useEffect(() => {
+    fetchPlants();
+  }, []);
+
+
+return (
+    <div className="wrapper">
+      {plants.length > 0 ? (
+        <div className="content">
+          {plants.map((plants) => (
+            <div className="post">
+              <h2>{plants.common_name}</h2>
+              <p>{plants.bibliography}</p>
+            </div>
+          ))}
         </div>
-    );
+      ) : (
+        <p className="loading">Loading... </p>
+      )}
+    </div>
+  );
 }
 
 export default Plants;
