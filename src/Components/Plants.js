@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 const Plants = () => {
     const [plants, setPlants] = useState([])
 
-const API_URL = 'https://trefle.io/api/v1/plants?token=qrbYXSsfNwVJLOQI24d-itX0n3dPO3GJ5veUkHz1J7o';
+const API_URL = 'api/v1/plants?token=qrbYXSsfNwVJLOQI24d-itX0n3dPO3GJ5veUkHz1J7o';
 
 const fetchPlants = async () => {
     const { data } = await axios.get(API_URL);
